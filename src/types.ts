@@ -62,6 +62,5 @@ export type WireframePage =
   | "Solusi" 
   | "Monitoring" 
   | "Pimpinan" 
-  | "AI_Assistant" 
   | "Laporan"
   | "Pengaturan";

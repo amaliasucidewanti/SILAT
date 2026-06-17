@@ -127,7 +127,6 @@ export default function App() {
       case "Monitoring": return "Monitoring Progres Kasus";
       case "Laporan": return "Konsolidasi Laporan Cetak";
       case "Pimpinan": return "Dashboard Analitik Pimpinan";
-      case "AI_Assistant": return "Asisten Kecerdasan AI";
       case "Pengaturan": return "Penyetelan Konfigurasi";
       case "Overview": return "Cetak Biru Overview / Spek";
       case "Arsitektur": return "Topologi Arsitektur & Alur";
@@ -249,19 +248,6 @@ export default function App() {
             >
               <Star className="w-4 h-4 text-amber-500" />
               Dashboard Pimpinan
-            </button>
-
-            <button
-              id="menu-ai"
-              onClick={() => handlePageSelect("AI_Assistant")}
-              className={`w-full text-left px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-2.5 transition-all ${
-                activePage === "AI_Assistant" 
-                  ? "bg-slate-800 text-white border-l-2 border-emerald-450 pl-3.5 shadow-sm" 
-                  : "hover:bg-slate-800/60 hover:text-white"
-              }`}
-            >
-              <BrainCircuit className="w-4 h-4 text-emerald-400 animate-pulse" />
-              Asisten AI (Gemini)
             </button>
 
             <button
@@ -392,7 +378,7 @@ export default function App() {
                   Laporan & Cetak Berkas
                 </button>
 
-                <button
+                 <button
                   onClick={() => handlePageSelect("Pimpinan")}
                   className={`w-full text-left px-3 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-2.5 ${
                     activePage === "Pimpinan" ? "bg-slate-800 text-white" : "hover:bg-slate-800/50"
@@ -400,16 +386,6 @@ export default function App() {
                 >
                   <Star className="w-4.5 h-4.5 text-amber-500" />
                   Dashboard Pimpinan
-                </button>
-
-                <button
-                  onClick={() => handlePageSelect("AI_Assistant")}
-                  className={`w-full text-left px-3 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-2.5 ${
-                    activePage === "AI_Assistant" ? "bg-slate-800 text-white" : "hover:bg-slate-800/50"
-                  }`}
-                >
-                  <BrainCircuit className="w-4.5 h-4.5 text-emerald-400" />
-                  Asisten AI (Gemini)
                 </button>
 
                 <button
@@ -531,8 +507,8 @@ export default function App() {
             {/* Pages switch router shell */}
             <div className="min-h-[500px]">
               
-              {/* Core 9 SILAT pages (rendered via WireframeSandbox wrapper with hoisted state properties) */}
-              {["Dashboard", "Tamu", "Permasalahan", "Solusi", "Monitoring", "Laporan", "Pimpinan", "AI_Assistant", "Pengaturan"].includes(activePage) && (
+              {/* Core 8 SILAT pages (rendered via WireframeSandbox wrapper with hoisted state properties) */}
+              {["Dashboard", "Tamu", "Permasalahan", "Solusi", "Monitoring", "Laporan", "Pimpinan", "Pengaturan"].includes(activePage) && (
                 <div className="bg-none">
                   <WireframeSandbox 
                     activePage={activePage as WireframePage}
