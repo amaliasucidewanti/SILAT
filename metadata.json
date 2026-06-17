@@ -1,0 +1,6 @@
+{
+  "name": "SILAT BPMP",
+  "description": "Sistem Informasi Layanan dan Tindak Lanjut BPMP Provinsi Maluku Utara",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
